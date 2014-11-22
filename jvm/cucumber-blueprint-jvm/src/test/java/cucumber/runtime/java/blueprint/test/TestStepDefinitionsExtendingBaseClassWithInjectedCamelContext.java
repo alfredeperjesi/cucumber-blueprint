@@ -1,0 +1,4 @@
+package cucumber.runtime.java.blueprint.test;
+
+public class TestStepDefinitionsExtendingBaseClassWithInjectedCamelContext extends TestStepDefinitionsWithInjectedCamelContext {
+}
