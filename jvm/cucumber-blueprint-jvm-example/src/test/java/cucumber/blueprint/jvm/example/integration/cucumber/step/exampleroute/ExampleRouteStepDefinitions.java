@@ -5,16 +5,14 @@ import cucumber.api.java.en.When;
 import cucumber.blueprint.jvm.example.integration.cucumber.step.common.BaseStepDefinition;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ExampleRouteStepDefinitions extends BaseStepDefinition {
     private String result;
 
     @When("call the example route")
-    public void callRest() throws Exception {
-        assertThat(camelContext, notNullValue());
-        assertThat(exampleOsgiService, notNullValue());
+    public void callRoute() throws Exception {
+
         result = producerTemplate.requestBody("direct:test", "", String.class);
     }
 
